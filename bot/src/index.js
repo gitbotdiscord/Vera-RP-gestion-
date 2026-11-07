@@ -2285,6 +2285,7 @@ function demarrer(avecMembres) {
       console.warn('Intention « Server Members » non activée dans le portail Discord : pas de message de bienvenue possible.');
       client.destroy();
       return demarrer(false);
+      require('./events/welcome')(client);
     }
     throw err;
   });
@@ -2303,4 +2304,3 @@ if (require.main === module) {
 } else {
   module.exports = { embedsFiche, embedEvenement, embedCoffre, embedObjet, ligneMouvement };
 }
-require('./events/welcome')(client);
