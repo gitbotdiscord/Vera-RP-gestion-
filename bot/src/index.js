@@ -2303,3 +2303,4 @@ if (require.main === module) {
 } else {
   module.exports = { embedsFiche, embedEvenement, embedCoffre, embedObjet, ligneMouvement };
 }
+require('./events/welcome')(client);
